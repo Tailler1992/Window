@@ -948,10 +948,10 @@ textarea:focus {
 
 .popup_calc_close {
   position  : absolute;
-  top       : -2.2rem;
-  right     : -5rem;
+  top       : -1rem;
+  right     : 1rem;
   font-size : 4rem;
-  color     : #ffffff;
+  color     : #333333;
   border    : none;
   background: transparent;
 }
@@ -1081,10 +1081,10 @@ textarea:focus {
 
 .popup_calc_profile_close {
   position  : absolute;
-  top       : -2.2rem;
-  right     : -5rem;
+  top       : -1rem;
+  right     : 1rem;
   font-size : 4rem;
-  color     : #ffffff;
+  color     : #333333;
   border    : none;
   background: transparent;
 }
