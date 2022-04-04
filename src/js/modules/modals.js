@@ -3,11 +3,13 @@ const modals = () => {
     function openModal(modalWindow) {
         modalWindow.style.display = 'block';
         document.body.style.overflow = 'hidden';
+        document.body.style.marginRight = `${calcScroll()}px`
     }
 
     function closeModal(modalWindow) {
         modalWindow.style.display = 'none';
         document.body.style.overflow = '';
+        document.body.style.marginRight = '0px';
     }
 
     function closeWindows() {
@@ -44,6 +46,20 @@ const modals = () => {
                 closeModal(modalWindow);
             }
         });
+    }
+
+    function calcScroll() {
+        let div = document.createElement('div');
+
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+        document.body.appendChild(div);
+
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+        return scrollWidth;
     }
 
     bindModal('.popup_engineer', '.popup_engineer_btn', '.popup_engineer .popup_close');
